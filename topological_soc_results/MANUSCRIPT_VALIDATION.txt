@@ -1,0 +1,51 @@
+MANUSCRIPT AND COMPUTATIONAL ARTIFACT VALIDATION
+================================================
+
+Title
+-----
+Algebraic Topology Guided Deep Learning for Cybersecurity Operations
+
+Manuscript checks
+-----------------
+- Final word count: 9,171 words, obtained after document-statistics update in a full word processor.
+- Required interval: 9,100 to 9,200 words. Status: PASS.
+- Abstract length: 1,040 characters including spaces. Maximum allowed: 1,050. Status: PASS.
+- Final pagination: 24 pages.
+- No table of contents or index is included.
+- Structure: Abstract; Keywords; Sections 1 through 7; References.
+- Subsection counts: Section 1 = 2; Section 2 = 3; Section 3 = 2; Section 4 = 1; Section 5 = 3; Section 6 = 2; Section 7 = 1.
+- Sections 5, 6, and 7 contain no bibliographic citations.
+- Bibliography: 32 directly pertinent academic references and 32 unique DOI hyperlinks.
+- Mathematical content: 24 centered, consecutively numbered display equations plus 52 inline mathematical expressions, for 76 editable OMML objects created with the Word equation format.
+- Equation numbers are right aligned with tab stops and are not placed in tables.
+- Empirical content: 3 formatted tables and 6 publication-ready figures, all called and interpreted in the manuscript.
+- Typography and layout: Times New Roman; title 12 pt; body and headings 11 pt; justified paragraphs; purple headings and table styling; active blue DOI hyperlinks.
+- Visual quality control: all 24 rendered pages were inspected after final equation and layout corrections; no clipping, overflow, duplicated page number, broken equation, or unresolved placeholder was found.
+
+Computational experiment checks
+-------------------------------
+- Program: topological_soc_experiment.py
+- Language: English.
+- Syntax validation: PASS with Python py_compile.
+- Dependency validation and optional automatic installation are implemented.
+- Simulation seed: 20260805.
+- Neural training seeds: 13 and 29.
+- Data partitions: 640 training, 224 validation, and 320 test windows.
+- Standard test set: 56 attack windows organized into 14 incidents.
+- Temporal representation: 16 intervals and 10 temporal features.
+- Relational representation: 12 graph nodes and 8 node features.
+- Topological representation: exact boundary-matrix reduction over F2 for H0 and H1, vectorized into 40 topological features.
+- Compared models: logistic baseline, temporal Transformer, graph neural network, temporal-graph fusion, topology fusion without consistency, and topology-guided fusion.
+- Calibration and threshold selection use validation data only.
+- Uncertainty analysis: 350 stratified bootstrap repetitions.
+- Stress conditions: in-distribution, concept drift, 20% telemetry loss, timestamp perturbation, and attribute perturbation.
+- Result folders: 5.1, 5.2, and 5.3, aligned with the manuscript's three Results and Analysis subsections.
+- Generated outputs: CSV and Markdown tables, JSON summary, calibrated test predictions, six figures, requirements file, and README.
+
+Headline executed results
+-------------------------
+- The logistic baseline achieved the highest in-distribution AUPRC: 0.933.
+- The topology-guided model achieved AUPRC 0.909, ECE 0.054, and the smallest worst-case relative AUPRC loss: 11.4%.
+- Topology fusion without consistency achieved F1 0.832 and MCC 0.807 in-distribution.
+- The topology-guided model generated 14.7 alerts per shift, attained precision 1.000 in the top-risk decile, recovered 78.6% of incidents in the top twenty windows, and reached mean time to detect of 9.29 minutes under the stated assumptions.
+- The evidence supports a bounded conclusion: topology improves stress stability and structural evidence in this experiment, but it does not dominate every nominal or operational metric.

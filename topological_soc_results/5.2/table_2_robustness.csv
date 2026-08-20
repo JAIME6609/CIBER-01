@@ -1,0 +1,7 @@
+Model,In-distribution,Concept drift,20% telemetry loss,Timestamp perturbation,Attribute perturbation,Worst-case loss (%)
+Logistic baseline,0.933,0.631,0.784,0.933,0.543,41.9
+Temporal Transformer,0.875,0.707,0.722,0.876,0.669,23.6
+Graph neural network,0.447,0.380,0.470,0.447,0.334,25.4
+Temporal-graph fusion,0.817,0.696,0.652,0.819,0.671,20.2
+Topology fusion without consistency,0.909,0.837,0.804,0.909,0.925,11.6
+Topology-guided fusion,0.909,0.834,0.805,0.908,0.927,11.4

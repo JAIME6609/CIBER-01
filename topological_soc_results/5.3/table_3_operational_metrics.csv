@@ -1,0 +1,7 @@
+Model,Alerts/shift,Top-10% precision,Top-20 incident recovery,MTTD (min),Grouping purity,Latency (ms),Memory (MB)
+Logistic baseline,12.6,1.000,0.786,10.00,0.607,0.000,0.000
+Temporal Transformer,12.9,0.969,0.714,10.00,0.643,0.010,0.025
+Graph neural network,38.7,0.438,0.500,6.79,0.518,0.005,0.011
+Temporal-graph fusion,18.6,0.906,0.857,8.21,0.536,0.013,0.034
+Topology fusion without consistency,13.5,1.000,0.786,10.00,0.500,0.012,0.041
+Topology-guided fusion,14.7,1.000,0.786,9.29,0.554,0.015,0.041
